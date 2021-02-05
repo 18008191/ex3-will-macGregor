@@ -14,7 +14,7 @@ public class ArrayOfNumbers {
     public  ArrayOfNumbers(int length) {
         array = new ArrayList<Integer>(length);
         for (int i = 0; i < length; i++) {
-            array.set(i, 0);
+            array.add(0);
         }
     }
         /**
@@ -27,7 +27,7 @@ public class ArrayOfNumbers {
          public  ArrayOfNumbers(List<Integer> original){
             array = new ArrayList<>(original.size());
             for(int i = 0 ; i < original.size() ; i++){
-                array.set(i,original.get(i));
+                array.add(original.get(i));
             }
     }
 
@@ -125,5 +125,15 @@ public class ArrayOfNumbers {
         for(int i = 0 ; i < array.size() ; i++){
             array.set(i,array.get(i) + value);
         }
+    }
+
+    /**
+     * Prints the items of the array
+     */
+    public void print(){
+        for (int i = 0 ; i < array.size(); i++){
+            System.out.print(array.get(i) + " ");
+        }
+        System.out.println();
     }
 }
